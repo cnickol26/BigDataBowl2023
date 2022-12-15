@@ -1,0 +1,13 @@
+nfl-big-data-bowl-2023 filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/games.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/pffScoutingData.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/players.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/plays.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week1.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week2.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week3.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week4.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week5.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week6.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week7.csv filter=lfs diff=lfs merge=lfs -text
+nfl-big-data-bowl-2023/week8.csv filter=lfs diff=lfs merge=lfs -text
