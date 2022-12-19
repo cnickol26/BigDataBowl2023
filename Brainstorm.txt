@@ -37,3 +37,12 @@ For Power rushing:
 For Speed rushing:
     Calculate how good a guy is at his get off - how fast can he get depth, how fast can he get out to protect the speed rush area around. Get-off - how fast can you get your 2 yard depth
     
+Modeling thoughts:
+
+Once we have it broken down to speed and power we need to decide how we want to measure performance
+    -Power rushing: Predicted time to get to the quarterback vs actual time?
+    -Speed rushing: Get off time/ time to get to a certain depth?
+        -Harder to evaluate since a win may involve pushing the end back around behind the quarterback
+    - Pooling or Bayesian Hierarchial to deal with the different groups we have in the data
+        -Maybe trying to predict some sort of latent variable
+    - Want rankings and not clusters of similar players which makes unsupervised harder
