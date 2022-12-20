@@ -47,6 +47,51 @@ Once we have it broken down to speed and power we need to decide how we want to 
         -Maybe trying to predict some sort of latent variable
     - Want rankings and not clusters of similar players which makes unsupervised harder
     
+
+
+Meeting with Porter:
+
+    Random effects model: intercept for offensive and defensive guy
+    One-hot offensive players and one-hot defensive players (could also do a variable for the defensive player skill)
+        Could try with defensive 
+    Ridge penalty on that model is a random effects (normal prior on skill)
+    Could add interaction term (probably unnecessary)
+    
+    Could hold out one week or one defender or a couple plays for each linesman
+    
+    Bayesian Hierarchical - team has its own distribution and the players have their own latent scores
+        Player might be good but it's because the team they're on
+    Look at intercept for each player 
+    
+    Simple: How many times does the defender make the QB move or touch him - binary classification
+    
+    We'll have two models with intercepts for each linesman
+    Have linear expressions, could plug in any defensive linesman and could plug in any defensive player and get a score
+        How to compare? Only against players that are going to face them or more - how would this offensive player do against everyone (plug all defenders into equation)?
+    Take both of these scenarios and rank seperately (best against speed and power) or could say percent of time of each type of rush 
+    
+    More sophisticated: metrics for ranking: lambda mart ranks based on trees
+        In survival analysis, model how long it takes for an event to occur (treatment, how long will they live). Modeling time to event is similar to time
+          until defender moves back
+        Could look at Cox proportional hazards model/competing risk model where we look at offensive linesman "competing" against a different offensive linesman against the same defender.
+        This would be unique.
+        Instead of getting numbers for each player seperately, we look at difference in time between player ability.
+        This gives more of the distribution of time to event where the regression is looking more at expected time
+        
+    Look at residuals and see how it does over time - this could indicate that player performance changes over week - add a slope term if needed
+    
+    Could score a player playing against a specific team or look at salary and compare with model.
+    
+    Control variables: could use information from past week's performance (sacks allowed, etc.) (probably too much) - could do whether they are obvious pass plays, could also do zone or man
+    
+    Challenge: What happens if a QB passes right away: it will look like the defender never had time to get anywhere - could remove these plays
+    
+    At the end, we probably want a model that can predict in the future, not just statically on 2021. 
+
+
+
+
+
 Connor's thoughts after talking with Porter:
     -Think your idea Josh about just looking at direction to seperate into speed and power is good
     -Could look for each time how many rows there are where the OT is within a certain distance to a DE and facing them (Binary encode and then sum with some threshold)
