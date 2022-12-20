@@ -46,3 +46,25 @@ Once we have it broken down to speed and power we need to decide how we want to 
     - Pooling or Bayesian Hierarchial to deal with the different groups we have in the data
         -Maybe trying to predict some sort of latent variable
     - Want rankings and not clusters of similar players which makes unsupervised harder
+    
+Connor's thoughts after talking with Porter:
+    -Think your idea Josh about just looking at direction to seperate into speed and power is good
+    -Could look for each time how many rows there are where the OT is within a certain distance to a DE and facing them (Binary encode and then sum with some threshold)
+    -May be harder to classify speed since it's not just one or the other
+        - Speed to power could be a problem
+        - Could look and see if their direction at the start is straight up the field for a certain amount of yards
+    -Once we have the split, Bayesian Hierarchial seems to be a good direction
+        -Will be impressive to talk about in our report, which seems to be important looking at past winners
+        -Priors on teams/players
+            -Looking at heights and weights is proabably a good place to start
+                -Has an impact on how long you can hold off a defender and most likely how fast you can get off the line
+        -For power our response can be expected distance to the qb given up and compare that to actual
+            -Will probably want to cut out throws under a certain amount of time
+                -But can also have time to throw a variable in the model
+                -Can include a variable if it is an obvious passing situation as well
+        -For speed the response is harder but maybe we do expected get off time vs actual
+            -Could include factors such as quarter here
+                -Maybe get off time increases (slows) as the game goes on
+        -Once we have both we want to aggregate in some way
+            - I like the idea of using the percentages we see each rush as our weights and then ranking
+            - Will want to say the way we have it set up is more of a gauge at how skilled a tackle is or their athletic ability since for speed we're not necessarily looking at if they gave up a sack, more if they were in the position or not to stop the DE
