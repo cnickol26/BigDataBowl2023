@@ -246,7 +246,11 @@ full_7 <- animate_play_full(random_plays[7])
 sub_8 <- animate_play_subset(random_plays[8])
 full_8 <- animate_play_full(random_plays[8])
 
+sub_9 <- animate_play_subset(random_plays[9])
+full_9 <- animate_play_full(random_plays[9])
 
+sub_10 <- animate_play_subset(random_plays[10])
+full_10 <- animate_play_full(random_plays[10])
 
 
 
