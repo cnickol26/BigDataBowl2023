@@ -12,7 +12,6 @@ library(gganimate)
 library(ggplot2)
 library(cowplot)
 library(repr)
-library(magick)
 ```
 
 # Examples Plays for Bull Rush, Speed Rush and a Running Back Chip
