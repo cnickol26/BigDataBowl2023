@@ -224,34 +224,71 @@ random_plays <- sample(subset$uniqueplayId, size=20)
 
 sub_1 <- animate_play_subset(random_plays[1])
 full_1 <- animate_play_full(random_plays[1])
+# The right tackle should be removed from this play because he immediately moves
+#    to the left for a screen play
 
 sub_2 <- animate_play_subset(random_plays[2])
 full_2 <- animate_play_full(random_plays[2])
+# This play has a TE guarding the edge where the right tackle is (not that big of a problem)
 
 sub_3 <- animate_play_subset(random_plays[3])
 full_3 <- animate_play_full(random_plays[3])
+# Mostly does a good job but the right tackle only comes into contact with his rusher for a
+#   brief moment before the ball is passed
 
 sub_4 <- animate_play_subset(random_plays[4])
 full_4 <- animate_play_full(random_plays[4])
+# Good play (maybe a double team)
 
 sub_5 <- animate_play_subset(random_plays[5])
 full_5 <- animate_play_full(random_plays[5])
+# Perfect play (right and left good)
 
 sub_6 <- animate_play_subset(random_plays[6])
 full_6 <- animate_play_full(random_plays[6])
+# Perfect play
 
 sub_7 <- animate_play_subset(random_plays[7])
 full_7 <- animate_play_full(random_plays[7])
+# Perfect play but the defensive end never really comes into contact with the linesman
 
 sub_8 <- animate_play_subset(random_plays[8])
 full_8 <- animate_play_full(random_plays[8])
+# Perfect
 
 sub_9 <- animate_play_subset(random_plays[9])
 full_9 <- animate_play_full(random_plays[9])
+# The right tackle has help (double team) on that defender here
 
 sub_10 <- animate_play_subset(random_plays[10])
 full_10 <- animate_play_full(random_plays[10])
+# Perfect play
 
+sub_11 <- animate_play_subset(random_plays[11])
+full_11 <- animate_play_full(random_plays[11])
+# Perfect play
+
+sub_12 <- animate_play_subset(random_plays[12])
+full_12 <- animate_play_full(random_plays[12])
+# Perfect - left is power rush and right is speed rush
+
+sub_13 <- animate_play_subset(random_plays[13])
+full_13 <- animate_play_full(random_plays[13])
+# Perfect
+
+sub_14 <- animate_play_subset(random_plays[14])
+full_14 <- animate_play_full(random_plays[14])
+# Play result = sack, defender on left side moves back to cover the RB route
+
+
+##### TAKEAWAYS #####
+
+# 1. We need to remove screen plays like the first one 
+#       (can do this by looking if the offensive linesman moves up, away from the QB)
+# 2. Have to account for when a linebacker blitzes so time to QB is longer but only because
+#       the first interaction happens later - can account for this by starting the time to QB
+#       when the x values of both linesman and defender are similar (less than a yard maybe)
+# 3. There are some plays where there is a double team - not common enough probably to try fixing
 
 
 
