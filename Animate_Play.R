@@ -281,6 +281,11 @@ full_14 <- animate_play_full(random_plays[14])
 # Play result = sack, defender on left side moves back to cover the RB route
 
 
+
+sub_19_frame <- animate_play_subset(20210912103127)
+full_19_frame <- animate_play_full(20210912103127)
+
+
 ##### TAKEAWAYS #####
 
 # 1. We need to remove screen plays like the first one 
