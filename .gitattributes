@@ -13,3 +13,5 @@ nfl-big-data-bowl-2023/week7.csv filter=lfs diff=lfs merge=lfs -text
 nfl-big-data-bowl-2023/week8.csv filter=lfs diff=lfs merge=lfs -text
 data_subset.csv filter=lfs diff=lfs merge=lfs -text
 clustered.csv filter=lfs diff=lfs merge=lfs -text
+data_flipped.csv filter=lfs diff=lfs merge=lfs -text
+data_not_flipped.csv filter=lfs diff=lfs merge=lfs -text
