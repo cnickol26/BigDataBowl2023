@@ -280,7 +280,8 @@ sub_14 <- animate_play_subset(random_plays[14])
 full_14 <- animate_play_full(random_plays[14])
 # Play result = sack, defender on left side moves back to cover the RB route
 
-
+animate_play_full(20210909003862)
+animate_play_subset(20210909003862)
 
 sub_19_frame <- animate_play_subset(20210912103127)
 full_19_frame <- animate_play_full(20210912103127)
@@ -295,7 +296,60 @@ full_19_frame <- animate_play_full(20210912103127)
 #       when the x values of both linesman and defender are similar (less than a yard maybe)
 # 3. There are some plays where there is a double team - not common enough probably to try fixing
 
+20210909002871
+
+animate_play_full(20210909002871)
+animate_play_subset(20210909002871)
+
+202109090097
+animate_play_full(202109090097)
+animate_play_subset(202109090097)
+
+202109190076
+animate_play_full(20211025001619)
+animate_play_subset(202109190975)
+
+20211017063573
+animate_play_subset(20211017063573)
+animate_play_full(20211017063573)
+
+# test play ids: 20210926112818,2021092602494,20211010112817,20211017071173,2021101010874,20211017024110, 20211003081723,2021091901500, 20211021002175, 20210926051887
+
+# test 1
+test_1 <- animate_play_subset(20210926112818)
+test_1
+# left (flip = 0): speed (inside)
+# right (flip = 1): power
+
+# test 2
+test_2 <- animate_play_subset(2021092602494)
+test_2
+# left (flip = 0): speed
+# right (flip = 1): speed
+
+# test 2
+test_2 <- animate_play_subset(2021092602494)
+test_2
+# left (flip = 0): power
+# right (flip = 1): speed
+
+animate_play_subset(20211025002934)
+
+animate_play_subset(20211010043129)
 
 
+animate_play_subset(202109120578)
+
+animate_play_full(202109120578)
+
+animate_play_subset(202109120676)
+
+animate_play_subset(20210926133182)
+
+
+animate_play_full(2021090900788)
+
+
+animate_play_subset(202109190975)
 
 
