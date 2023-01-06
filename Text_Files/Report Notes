@@ -1,0 +1,27 @@
+The easiest way to do this will be to create an Rmarkdown and then upload that to kaggle.
+
+- Going to first want to do an intro section
+  - Here probably will talk about speed vs power, show off the R animations and film gifs
+  - Maybe very limited data cleaning discussion (Plays that got filtered out like chips and scrambles)
+  - Goal of our modeling is seeing who has the most potential not necessarily looking at how they performed in terms of giving up sacks, etc. 
+  
+  - Next go into clustering
+    - Can discuss how we first did K means then decided on GMM because of the ability to look at probabilities 
+    - Filtered out the ones that the model was very uncertain about
+    - Can show proabilities for the 2 Myles Garrett plays from earlier
+    - Show the formula for GMM
+    
+  - Next is our Bayesian Hierachial Model
+    - Definitely will want to include the formula, talk specifically about how we are looking at the coefficients on the tackles
+    - Can mention the MSEs of our 2 models
+    - Maybe mention other models considered such as Random Effects, but we never really tried it so maybe not
+ 
+  - Results section
+    - 2 main figures
+      - Scatterplot followed by summary table
+      - Talk about best performers, reiterate how this is more about potential than actal performance
+  
+  - Conclusions
+    - Mention here exactly how our project is beneficial
+    - Can expand upon it by looking at salary and finding under valued players
+      - Link to paper that did this we read earlier
