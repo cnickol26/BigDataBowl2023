@@ -1,0 +1,100 @@
+"Player","            ","Team","Score (Equal Weight S:P)","Equal Weight Ranking","Score (Weighted by S:P Ratio)","Ratio Ranking","Total Rushes Faced"
+"Alejandro Villanueva","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/ravens.png""  height=""30""></img>'","BAL",0.312,29,0.325,18,127
+"Alex Bars","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bears.png"" height=""30"" ></img>'","CHI",-2.606,108,-1.437,107,10
+"Alex Leatherwood","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/raiders.png""  height=""30""></img>'","LV",-0.015,59,-0.003,54,80
+"Andre Dillard","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/eagles.png""  height=""30""></img>'","PHI",0.489,22,0.26,24,67
+"Andrew Thomas","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/giants.png""  height=""30""></img>'","NYG",-0.612,88,-0.14,73,92
+"Andrew Whitworth","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/rams.png""  height=""30""></img>'","LA",-0.139,70,0.202,27,102
+"Austin Jackson","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/dolphins.png""  height=""30""></img>'","MIA",0.652,13,0.435,13,74
+"Billy Turner","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/packers.png""  height=""30""></img>'","GB",0.944,7,0.242,25,83
+"Blake Hance","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/browns.png""  height=""30""></img>'","CLE",0.085,48,-0.117,71,49
+"Bobby Hart","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/titans.png""  height=""30""></img>'","TEN",-0.633,89,-0.338,89,12
+"Bobby Massie","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/broncos.png"" height=""30""></img>'","DEN",-0.095,66,0,52,116
+"Braden Smith","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/colts.png"" height=""30"" ></img>'","IND",1.159,5,0.625,5,23
+"Brady Christensen","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/panthers.png""  height=""30""></img>'","CAR",0.41,26,0.469,8,35
+"Brandon Parker","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/raiders.png""  height=""30""></img>'","LV",-0.125,67,0.014,49,49
+"Brandon Shell","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/seahawks.png""  height=""30""></img>'","SEA",0.425,24,0.2,28,56
+"Brian O'Neill","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/vikings.png""  height=""30"" ></img>'","MIN",0.113,44,0.002,51,116
+"Bryan Bulaga","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/chargers.png""  height=""30""></img>'","LAC",0.916,8,0.427,14,14
+"Cam Robinson","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/jags.png""  height=""30""></img>'","JAX",-0.137,69,-0.207,77,106
+"Cameron Erving","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/panthers.png""  height=""30""></img>'","CAR",0.257,35,0.281,22,95
+"Charles Leno","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/commanders.png"" height=""30"" ></img>'","WAS",0.521,20,0.275,23,117
+"Charlie Heck","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/texans.png""  height=""30""></img>'","HOU",-0.707,94,-0.305,86,37
+"Christian Darrisaw","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/vikings.png""  height=""30"" ></img>'","MIN",-2.415,107,-1.518,108,32
+"Christopher Hubbard","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/browns.png""  height=""30""></img>'","CLE",-0.365,79,-0.176,75,10
+"Chukwuma Okorafor","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/steelers.png""  height=""30""></img>'","PIT",0.228,38,-0.052,61,71
+"Cornelius Lucas","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/commanders.png"" height=""30"" ></img>'","WAS",1.203,4,0.462,10,45
+"D.J. Humphries","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cardinals.png"" height=""30"" ></img>'","ARI",-0.562,86,-0.275,84,103
+"Dan Moore","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/steelers.png""  height=""30""></img>'","PIT",0.549,18,0.402,15,112
+"Daryl Williams","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bills.png"" height=""30"" ></img>'","BUF",-0.128,68,-0.057,64,56
+"David Quessenberry","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/titans.png""  height=""30""></img>'","TEN",0.024,56,0.113,38,113
+"Dion Dawkins","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bills.png"" height=""30"" ></img>'","BUF",0.095,46,-0.012,56,113
+"Donovan Smith","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bucs.png"" height=""30"" ></img>'","TB",0.282,32,0.078,40,173
+"Duane Brown","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/seahawks.png""  height=""30""></img>'","SEA",0.297,30,-0.016,57,87
+"Elgton Jenkins","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/packers.png""  height=""30""></img>'","GB",-0.357,78,-0.161,74,45
+"Elijah Wilkinson","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bears.png"" height=""30"" ></img>'","CHI",0.002,57,-0.071,66,27
+"Eric Fisher","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/colts.png"" height=""30"" ></img>'","IND",-0.688,93,-0.292,85,84
+"Garett Bolles","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/broncos.png"" height=""30""></img>'","DEN",-0.038,60,0.051,47,126
+"George Fant","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/jets.png""  height=""30""></img>'","NYJ",0.14,41,-0.224,80,100
+"Germain Ifedi","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bears.png"" height=""30"" ></img>'","CHI",-0.346,76,-0.104,68,57
+"Geron Christian","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/texans.png""  height=""30""></img>'","HOU",-0.827,99,-0.423,97,50
+"Isaiah Wynn","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/pats.png""  height=""30""></img>'","NE",0.078,50,-0.334,88,129
+"Jack Conklin","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/browns.png""  height=""30""></img>'","CLE",-0.515,83,-0.203,76,48
+"Jack Driscoll","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/eagles.png""  height=""30""></img>'","PHI",1.949,2,0.99,2,15
+"Jake Matthews","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/falcons.png""  height=""30""></img>'","ATL",-0.736,96,-0.438,100,154
+"James Hudson","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/browns.png""  height=""30""></img>'","CLE",-1.162,105,-0.567,103,29
+"James Hurst","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/saints.png""  height=""30""></img>'","NO",0.063,51,0.152,36,43
+"Jason Peters","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bears.png"" height=""30"" ></img>'","CHI",0.117,43,0.19,30,82
+"Jawaan Taylor","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/jags.png""  height=""30""></img>'","JAX",0.055,53,0.053,46,97
+"Jaylon Moore","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/49ers.png"" height=""35""></img>'","SF",-0.634,90,-0.464,101,18
+"Jedrick Wills","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/browns.png""  height=""30""></img>'","CLE",-0.077,63,-0.109,69,53
+"Jesse Davis","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/dolphins.png""  height=""30""></img>'","MIA",0.898,9,0.442,12,76
+"Joe Haeg","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/steelers.png""  height=""30""></img>'","PIT",0.125,42,0.069,43,43
+"Jonah Williams","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bengals.png"" height=""30""></img>'","CIN",0.258,34,0.071,42,132
+"Jordan Mailata","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/eagles.png""  height=""30""></img>'","PHI",0.28,33,-0.055,63,68
+"Josh Jones","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cardinals.png"" height=""30"" ></img>'","ARI",-1.026,103,-0.388,92,29
+"Julien Davenport","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/colts.png"" height=""30"" ></img>'","IND",0.321,28,0.3,20,62
+"Justin Herron","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/pats.png""  height=""30""></img>'","NE",-0.653,91,-0.338,90,96
+"Justin Murray","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cardinals.png"" height=""30"" ></img>'","ARI",-0.547,84,-0.211,78,18
+"Kaleb McGary","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/falcons.png""  height=""30""></img>'","ATL",-0.473,81,-0.423,98,122
+"Kelvin Beachum","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cardinals.png"" height=""30"" ></img>'","ARI",-0.157,71,-0.001,53,47
+"Kendall Lamm","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/titans.png""  height=""30""></img>'","TEN",0.079,49,-0.059,65,17
+"Kolton Miller","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/raiders.png""  height=""30""></img>'","LV",0.189,39,-0.02,58,142
+"La'el Collins","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cowboys.png"" height=""30"" ></img>'","DAL",-0.488,82,-0.392,93,26
+"Lane Johnson","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/eagles.png""  height=""30""></img>'","PHI",0.353,27,0.162,34,60
+"Laremy Tunsil","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/texans.png""  height=""30""></img>'","HOU",0.599,15,0.058,44,55
+"Liam Eichenberg","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/dolphins.png""  height=""30""></img>'","MIA",-0.044,61,-0.12,72,121
+"Lucas Niang","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/chiefs.png""  height=""30""></img>'","KC",0.257,36,0.219,26,63
+"Marcus Cannon","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/texans.png""  height=""30""></img>'","HOU",-0.407,80,-0.412,95,46
+"Matt Nelson","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/lions.png""  height=""30""></img>'","DET",0.23,37,0.179,32,144
+"Matt Peart","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/giants.png""  height=""30""></img>'","NYG",-0.312,74,-0.274,83,54
+"Matt Pryor","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/colts.png"" height=""30"" ></img>'","IND",-0.98,102,-0.369,91,41
+"Mekhi Becton","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/jets.png""  height=""30""></img>'","NYJ",0.497,21,0.574,6,13
+"Michael Onwenu","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/pats.png""  height=""30""></img>'","NE",-0.787,97,-0.05,60,25
+"Mike McGlinchey","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/49ers.png"" height=""35""></img>'","SF",-0.091,65,-0.116,70,96
+"Mike Remmers","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/chiefs.png""  height=""30""></img>'","KC",0.553,17,0.387,16,46
+"Morgan Moses","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/jets.png""  height=""30""></img>'","NYJ",0.539,19,0.058,45,88
+"Nate Solder","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/giants.png""  height=""30""></img>'","NYG",0.285,31,0.296,21,109
+"Orlando Brown","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/chiefs.png""  height=""30""></img>'","KC",-0.181,72,0.188,31,120
+"Patrick Mekari","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/ravens.png""  height=""30""></img>'","BAL",-0.348,77,-0.052,62,85
+"Penei Sewell","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/lions.png""  height=""30""></img>'","DET",0.188,40,0.313,19,165
+"Rashawn Slater","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/chargers.png""  height=""30""></img>'","LAC",0.086,47,0.126,37,136
+"Rashod Hill","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/vikings.png""  height=""30"" ></img>'","MIN",-0.676,92,-0.266,82,87
+"Riley Reiff","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bengals.png"" height=""30""></img>'","CIN",-0.325,75,-0.078,67,122
+"Rob Havenstein","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/rams.png""  height=""30""></img>'","LA",0.484,23,0.199,29,110
+"Ronnie Stanley","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/ravens.png""  height=""30""></img>'","BAL",0.756,11,0.796,3,20
+"Ryan Ramczyk","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/saints.png""  height=""30""></img>'","NO",0.625,14,0.171,33,76
+"Samuel Cosmi","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/commanders.png"" height=""30"" ></img>'","WAS",0.582,16,0.074,41,66
+"Spencer Brown","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bills.png"" height=""30"" ></img>'","BUF",-0.889,100,-0.314,87,33
+"Storm Norton","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/chargers.png""  height=""30""></img>'","LAC",-0.791,98,-0.562,102,99
+"Taylor Lewan","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/titans.png""  height=""30""></img>'","TEN",-0.556,85,-0.218,79,85
+"Taylor Moton","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/panthers.png""  height=""30""></img>'","CAR",0.748,12,0.47,7,151
+"Terence Steele","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cowboys.png"" height=""30"" ></img>'","DAL",0.109,45,-0.231,81,77
+"Terron Armstead","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/saints.png""  height=""30""></img>'","NO",-0.005,58,-0.034,59,42
+"Trent Williams","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/49ers.png"" height=""35""></img>'","SF",-0.077,64,0.089,39,82
+"Tristan Wirfs","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/bucs.png"" height=""30"" ></img>'","TB",-0.055,62,-0.007,55,169
+"Ty Sambrailo","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/titans.png""  height=""30""></img>'","TEN",-0.295,73,0.006,50,26
+"Tyron Smith","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/cowboys.png"" height=""30"" ></img>'","DAL",0.049,54,0.04,48,100
+"Yasir Durant","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/pats.png""  height=""30""></img>'","NE",-0.733,95,-0.421,96,15
+"Yodny Cajuste","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/pats.png""  height=""30""></img>'","NE",-1.167,106,-0.83,106,20
+"Yosuah Nijman","<img src=""https://github.com/cnickol26/BigDataBowl2023/raw/main/logos/packers.png""  height=""30""></img>'","GB",0.785,10,0.332,17,45
