@@ -23,11 +23,12 @@ library(shinythemes)
 ```{r}
 speed_coef <- read_csv('speed_coeff.csv')
 logos <- read_csv('logos.csv')
+pics <- read_csv('linemanlinks.csv')
 
 speed_coef$mean_scaled <- scale(speed_coef$mean)[,1]
 
-speed_coef_filt <- speed_coef %>% left_join(logos) %>% select(tackle_name, link,team, mean_scaled, sd, n) %>% filter(n >= 5) %>% mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
-  rename(`Speed Score` = mean_scaled, `Speed Score SD` = sd, `Number of Speed Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team)
+speed_coef_filt <- speed_coef %>% left_join(logos) %>% left_join(pics, by = c('tackle_name' = 'Player')) %>% select(link_to_pic, tackle_name, link,team, mean_scaled, sd, n) %>% filter(n >= 5) %>% mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
+  rename(`Speed Score` = mean_scaled, `Speed Score SD` = sd, `Number of Speed Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team, `  ` = link_to_pic)
 
 ```
 ## Looking at Power
@@ -35,8 +36,8 @@ speed_coef_filt <- speed_coef %>% left_join(logos) %>% select(tackle_name, link,
 power_coef <- read_csv("power_coeff.csv")
 
 power_coef$mean_scaled <- scale(power_coef$mean)[,1]
-power_coef_filt <- power_coef %>% left_join(logos) %>% select(tackle_name, link,team, mean_scaled, sd, n) %>% filter(n >= 5) %>% mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
-  rename(`Power Score` = mean_scaled, `Power Score SD` = sd, `Number of Power Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team)
+power_coef_filt <- power_coef %>% left_join(logos) %>% left_join(pics, by = c('tackle_name' = 'Player')) %>% select(link_to_pic, tackle_name, link,team, mean_scaled, sd, n) %>% filter(n >= 5) %>% mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
+  rename(`Power Score` = mean_scaled, `Power Score SD` = sd, `Number of Power Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team, `  ` = link_to_pic)
 
 ```
 
@@ -57,9 +58,9 @@ full_data3 <- full_data2 %>% mutate(equal_rank = rank(-equal_weight,ties.method 
                                   rushes_faced = num_power+num_speed) %>% 
   filter(rushes_faced >= 10)
 
-full_data4 <- full_data3 %>% left_join(logos)
+full_data4 <- full_data3 %>% left_join(logos) %>% left_join(pics, by = c('tackle_name' = 'Player'))
 
-full_data4 <- full_data4 %>% select(tackle_name, link, team,
+full_data4 <- full_data4 %>% select(link_to_pic, tackle_name, link, team,
                                     equal_weight, equal_rank, 
                                     percent_weight, percent_rank,
                                     rushes_faced)
@@ -69,27 +70,31 @@ full_data4 <- full_data4 %>% rename(Player = tackle_name, `            ` = link,
                                     `Score (Equal Weight S:P)` = equal_weight,
                                     `Equal Weight Ranking` = equal_rank, 
                                     `Score (Weighted by S:P Ratio)` = percent_weight,
-                                    `Ratio Ranking` = percent_rank)
+                                    `Ratio Ranking` = percent_rank,
+                                    `  ` = link_to_pic)
 
 ```
 
 ```{r}
 starters_full_data <- full_data2 %>% mutate(rushes_faced = num_power+num_speed) %>% 
-  filter(rushes_faced > 48) %>% 
+  filter(rushes_faced > 48) %>% left_join(pics, by = c('tackle_name' = 'Player')) %>% 
   mutate(equal_rank = rank(-equal_weight,ties.method = 'first'),
-         percent_rank = rank(-percent_weight, ties.method = 'first'))%>% left_join(logos) %>% select(tackle_name, link, team,equal_weight, equal_rank, percent_weight, percent_rank, rushes_faced) %>% rename(Player = tackle_name, ` ` = link, Team = team,
+         percent_rank = rank(-percent_weight, ties.method = 'first'))%>% left_join(logos) %>% select(link_to_pic, tackle_name, link, team,equal_weight, equal_rank, percent_weight, percent_rank, rushes_faced) %>% rename(Player = tackle_name, ` ` = link, Team = team,
                                     `Total Rushes Faced` = rushes_faced, 
                                     `Score (Equal Weight S:P)` = equal_weight,
                                     `Equal Weight Ranking` = equal_rank, 
                                     `Score (Weighted by S:P Ratio)` = percent_weight,
-                                    `Ratio Ranking` = percent_rank)
+                                    `Ratio Ranking` = percent_rank,
+                                    `  ` = link_to_pic)
 
-starters_power_data <- power_coef %>% left_join(logos) %>% select(tackle_name, link,team, mean_scaled, sd, n) %>% filter(n > 33) %>%  mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
-  rename(`Power Score` = mean_scaled, `Power Score SD` = sd, `Number of Power Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team) 
+starters_power_data <- power_coef %>% left_join(logos) %>% left_join(pics, by = c('tackle_name' = 'Player')) %>% select(link_to_pic,tackle_name, link,team, mean_scaled, sd, n) %>% filter(n > 33) %>%  mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
+  rename(`Power Score` = mean_scaled, `Power Score SD` = sd, `Number of Power Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team,`  ` = link_to_pic) 
 
-starters_speed_data <- speed_coef %>% left_join(logos) %>% select(tackle_name, link,team, mean_scaled, sd, n) %>% filter(n > 13) %>% mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
-  rename(`Speed Score` = mean_scaled, `Speed Score SD` = sd, `Number of Speed Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team)
+starters_speed_data <- speed_coef %>% left_join(logos) %>% left_join(pics, by = c('tackle_name' = 'Player')) %>% select(link_to_pic,tackle_name, link,team, mean_scaled, sd, n) %>% filter(n > 13) %>% mutate(mean_scaled = round(mean_scaled, 3),sd = round(sd,3),Ranking = rank(-mean_scaled, ties.method = 'first')) %>% 
+  rename(`Speed Score` = mean_scaled, `Speed Score SD` = sd, `Number of Speed Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team, `  ` = link_to_pic)
 ```
+
+
 
 ```{r}
 ## Colour and values for table colour formatting
@@ -97,6 +102,8 @@ breaks <- seq(-3, 2.3, by = .25)
 colors <- colorRampPalette(c("#E84B4B", "#68C949"))(length(breaks) + 1)
 breaks_n <- seq(0, 129, by = 3)
 colors_n <- colorRampPalette(c("#E84B4B", "#68C949"))(length(breaks_n) + 1)
+breaks_speed <- seq(0, 57, by = 3)
+colors_speed <- colorRampPalette(c("#E84B4B", "#68C949"))(length(breaks_speed) + 1)
 
 ui <- navbarPage(title = "Modeling Results", theme = shinytheme("spacelab"),
                checkboxInput("starters",label='"Starters" Only',value=FALSE),
@@ -114,8 +121,10 @@ server = function(input, output){
           options = list(scrollX = TRUE,
                          scrollY = TRUE,
                          server = FALSE,
-                         columnDefs = list(list(className = 'dt-center',width = '500px',targets = '_all'))),
+                         pageLength = 100,
+                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
           escape = FALSE,
+          filter = 'top',
           rownames = FALSE) %>% 
         formatStyle(columns = c('Player', 'Team', 'Total Rushes Faced', 'Equal Weight Ranking',
                                 'Ratio Ranking'), fontWeight = 'bold') %>% 
@@ -126,8 +135,10 @@ server = function(input, output){
           options = list(scrollX = TRUE,
                          scrollY = TRUE,
                          server = FALSE,
-                         columnDefs = list(list(className = 'dt-center',width = '500px',targets = '_all'))),
+                         pageLength = 100,
+                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
           escape = FALSE,
+          filter = 'top',
           rownames = FALSE) %>% 
         formatStyle(columns = c('Player', 'Team', 'Total Rushes Faced', 'Equal Weight Ranking',
                                 'Ratio Ranking'), fontWeight = 'bold') %>% 
@@ -142,28 +153,32 @@ server = function(input, output){
           options = list(scrollX = TRUE,
                          scrollY = TRUE,
                          server = FALSE,
-                         columnDefs = list(list(className = 'dt-center',width = '500px',targets = '_all'))),
+                         pageLength = 100,
+                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
           escape = FALSE,
+          filter = 'top',
           rownames = FALSE) %>% 
         formatStyle(columns = c('Player', 'Team', 'Number of Speed Rushes Faced', 
                                 'Ranking', 'Speed Score SD'), fontWeight = 'bold') %>% 
       formatStyle(c('Speed Score'), backgroundColor = styleInterval(breaks, colors),
                   color = 'white',fontWeight = 'bold' ) %>% 
-      formatStyle(c('Number of Speed Rushes Faced'), backgroundColor = styleInterval(breaks_n, colors_n), color = 'white',fontWeight = 'bold')
+      formatStyle(c('Number of Speed Rushes Faced'), backgroundColor = styleInterval(breaks_speed, colors_speed), color = 'white',fontWeight = 'bold')
           }
       else{
       datatable(speed_coef_filt,
           options = list(scrollX = TRUE,
                          scrollY = TRUE,
                          server = FALSE,
-                         columnDefs = list(list(className = 'dt-center',width = '500px',targets = '_all'))),
+                         pageLength = 100,
+                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
           escape = FALSE,
+          filter = 'top',
           rownames = FALSE) %>% 
         formatStyle(columns = c('Player', 'Team', 'Number of Speed Rushes Faced', 
                                 'Ranking', 'Speed Score SD'), fontWeight = 'bold') %>% 
       formatStyle(c('Speed Score'), backgroundColor = styleInterval(breaks, colors),
                   color = 'white',fontWeight = 'bold' ) %>% 
-      formatStyle(c('Number of Speed Rushes Faced'), backgroundColor = styleInterval(breaks_n, colors_n), color = 'white',fontWeight = 'bold')
+      formatStyle(c('Number of Speed Rushes Faced'), backgroundColor = styleInterval(breaks_speed, colors_speed), color = 'white',fontWeight = 'bold')
       }
         })
       output$power_table <-DT::renderDT({
@@ -172,8 +187,10 @@ server = function(input, output){
           options = list(scrollX = TRUE,
                          scrollY = TRUE,
                          server = FALSE,
-                         columnDefs = list(list(className = 'dt-center',width = '500px',targets = '_all'))),
+                         pageLength = 100,
+                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
           escape = FALSE,
+          filter = 'top',
           rownames = FALSE) %>% 
         formatStyle(columns = c('Player', 'Team', 'Number of Power Rushes Faced', 
                                 'Ranking', 'Power Score SD'), fontWeight = 'bold') %>% 
@@ -186,8 +203,10 @@ server = function(input, output){
           options = list(scrollX = TRUE,
                          scrollY = TRUE,
                          server = FALSE,
-                         columnDefs = list(list(className = 'dt-center',width = '500px',targets = '_all'))),
+                         pageLength = 100,
+                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
           escape = FALSE,
+          filter = 'top',
           rownames = FALSE) %>% 
         formatStyle(columns = c('Player', 'Team', 'Number of Power Rushes Faced', 
                                 'Ranking', 'Power Score SD'), fontWeight = 'bold') %>% 
