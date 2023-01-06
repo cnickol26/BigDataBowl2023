@@ -19,16 +19,16 @@ for i in tackles:
     images = soup.find_all('img')
     urls.append(str(images[1]).split("src=")[1][1:-3])
 
-
-
+urls
+'''
 first = 'Tristan Wirfs'
 first = 'Alejandro Villanueva'
 sep = first.split()
 
 
-r = requests.get(url+'search.fcgi?search='+sep[0]+'+'+sep[1], headers={'User-agent':'Twitterbot'})
+r = requests.get(url+'search.fcgi?search='+sep[0]+'+'+sep[1], headers=me)
 soup = BeautifulSoup(r.content, 'html.parser')
 images = soup.find_all('img')
 str(images[1]).split("src=")[1][1:-3]
-
+'''
 
