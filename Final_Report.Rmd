@@ -1,5 +1,5 @@
 ---
-title: "Evaluating Offensive Linemen with Bayesian Methods"
+title: "Evaluating Offensive Tackles with Bayesian Methods"
 author: 'Josh Gen (jdg9vr@virginia.edu) and Connor Nickol (can2hr@virginia.edu)'
 date: "Big Data Bowl 2023: Metric Track"
 output: 
@@ -26,12 +26,38 @@ A power rush, demonstrated in Figure 2 below, occurs when the defender attempts 
 
 ![**Figure 2**: Myles Garrett, circled in red, engaging in a power rush](./Visuals/powerrush.gif)
 
-
+The figures above make it clear that offensive linemen must be assessed differently for speed and power rushes. For blocking against speed rushing, the key for a lineman is to have a quick "get-off time", or time to move back from their initial position on the line of scrimmage. The first couple moments of the play are crucial when the edge rusher is speed rushing, as the offensive lineman must move back far enough and quick enough to block a defender attempting to get around the lineman. For power rushing, the key for the lineman is to not allow the defender to overpower them, or not give up any distance to the quarterback. Against power rushing, a lineman is successful if they do not allow the rusher to push them back towards the quarterback. This will be more formally defined in the following section.
 
 # Methods
 
-## Speed vs. Power Rush Clustering
+We seek to model the performance of offensive tackles by first modeling the defender's rush type (speed or power), then modeling individual tackle performance, holding all other important factors constant. We chose to focus only on offensive tackles and not evaluate other positions because their blocking can often be more isolated from the center and guards, and double teams and stunts are less common for tackles. At a high level, our project methods can be viewed in three phases: data cleaning, speed vs. power modeling, and individual offensive tackle modeling.
+
+## Data Cleaning
+
+Using the expansive, eight-week NFL player tracking data, we first cleaned and filtered the data. We removed the following events from the data for our analysis:
+
+  - Chip blocks
+  - QB scrambles
+  - Non-standard QB dropbacks
+  - All positions other than QBs, tackles, and edge rusher
+  - Edge rushers who were also in coverage
+  - Edge rushers who disengaged with the tackle (stunt block or other)
+
+Note that a chip block occurs when the running back or tight end "chips" the defender, aiding the lineman, before running their route, thereby aiding them in blocking the defender. Each of these events change the interaction between the lineman and the defender, and would skew our model if left in.
+
+## Gaussian Mixture Model 
+
+We created a k-means clustering model as well (both performed similarly on our test data but GMM gives probability of belonging in each class)
+
+Remove plays where the model was less than 55% confident in its prediction
 
 ## Bayesian Hierarchical Model
 
 # Results
+
+# Discussion
+
+Our analysis could certainly be extended to centers and guards, but some important changes would be required. Could compare our analysis with salary data, though we are not analzying overall performance.
+
+
+
