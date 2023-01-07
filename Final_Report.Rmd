@@ -33,7 +33,9 @@ The figures above make it clear that offensive linemen must be assessed differen
 
 # Methods
 
-We seek to model the performance of offensive tackles by first modeling the defender's rush type (speed or power), then modeling individual tackle performance, holding all other important factors constant. We chose to focus only on offensive tackles and not evaluate other positions because their blocking can often be more isolated from the center and guards, and double teams and stunts are less common for tackles. At a high level, our project methods can be viewed in three phases: data cleaning, speed vs. power modeling, and individual offensive tackle modeling.
+We seek to model the performance of offensive tackles by first modeling the defender's rush type (speed or power), then modeling individual tackle performance, holding all other important factors constant. We chose to focus only on offensive tackles and not evaluate other positions because their blocking can often be more isolated from the center and guards, and double teams and stunts are less common for tackles. At a high level, our project methods can be viewed in three phases: data cleaning, speed vs. power modeling, and individual offensive tackle modeling. Figure 3 below provides the overall flow of our project.
+
+![**Figure 3**: Model framework with three steps](workflow.png)
 
 ## Data Cleaning
 
@@ -73,13 +75,13 @@ table <- data.frame(Rush_Type=c("Power", "Speed"),
                     End_dist_travel = c(7.27401843, 9.67472515),
                     Mean_end_speed = c(2.78494659, 2.98266389))
 
-kable(table, caption="Figure 3: Centers of each variable for power and speed rush types from the Gaussian Mixture Model")%>% kable_styling(bootstrap_options = c("striped", "hover"))%>%row_spec(1:2,bold=T,hline_after = T)
+kable(table, caption="Figure 4: Centers of each variable for power and speed rush types from the Gaussian Mixture Model")%>% kable_styling(bootstrap_options = c("striped", "hover"))%>%row_spec(1:2,bold=T,hline_after = T)
 ```
 
 
 To demonstrate an instance of the model in action, we will examine a play from our test set, in the third quarter of the October 10, 2021 Cardinals vs. 49ers game. We removed all players except the quarterback, tackles, and edge rushers for the animation below. 
 
-![**Figure 4**: Animated play with just tackles, quarterback, and edge rushers demonstrating speed and power rush](rush_type_ex.gif)
+![**Figure 5**: Animated play with just tackles, quarterback, and edge rushers demonstrating speed and power rush](rush_type_ex.gif)
 
 The model correctly classifies the left edge rusher (jersey number 98) as a speed rush with 69% probability and the right edge rusher (jersey number 56) as a power rush with 92% probability. The model was successful in predicting rush type, and we will use its classifications in our Bayesian Hierarchical Model to model power and speed rushes separately.
 
@@ -113,7 +115,11 @@ Similarly to the power rushing model, we include a varying intercept for each of
 
 # Discussion
 
-Our analysis could certainly be extended to centers and guards, but some important changes would be required. Could compare our analysis with salary data, though we are not analzying overall performance.
+Our immediate thoughts on how to expand upon our work is to look at the salary and contract situation of the players who performed well in our model, much like what was done in this paper by Byanna et al. Ideally you would be able to use our model to evaluate the potential of draft prospects, but there is not enough data collection at the college level in order to do this. Instead, it would be beneficial to use our model to identify backup tackles who could be potential trade candidates, or signed for little money in free agency. These players could be brought in for little investment but, if developed properly, could benefit a team tremendously.
+
+While our analysis could certainly be extended to centers and guards, some important changes would be required. Double teams are much more common and often these players need to pick up stunting lineman and blitzing linebackers. Their roles from play to play are much more nuanced than the tackle so we would need to use different techniques in selecting what plays to look at.
+
+Another potential use of our work would be related to edge rusher specific game planning. Using our clustering, an offensive tackle would instantly be able to know the tendencies of the edge rushers he is facing each week. Along the overall rush move percentages, one could look at specific down and distances and know exactly what to expect come game time. This could save countless hours of coach/player film watching freeing them up to work on other aspects of preparing for a game.
 
 
 
