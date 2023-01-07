@@ -85,7 +85,29 @@ The model correctly classifies the left edge rusher (jersey number 98) as a spee
 
 ## Bayesian Hierarchical Model
 
+With the rush type classifications from the Gaussian Mixture Model, we used Bayesian Hierarchical Models, with additional priors on each of the offensive tackle's intercepts to penalize low sample sizes. We chose Bayesian Hierarchical Models because it will do a better job at accounting for small smaple sizes of some tackles, while still individualizing results. Since success for an offensive tackle is measured differently for defending speed and power rushing, we created two different models measuring different responses.
 
+Both models use the following equation, but with different responses and predictors:
+
+$$
+\hat{y}_{i} = \hat{\beta}_{0[j]} + \hat{\beta}_kX_i
+$$
+
+In this equation, i is each observation, k is each predictor, and j is each offensive tackle. The model is a Bayesian Hierarchical Model as each $\beta$ has an uninformed prior, with additional priors on the mean and standard deviation of each $\beta_0$ (for each offensive tackle). Our results section uses the standardized version of the outputted $\beta_0$'s (scaled to the mean) to score each offensive lineman against power rushing and speed rushing. 
+
+### Power Rushing Model
+
+For power rushing, the offensive lineman is engaged by the rusher, who attempts to push them back and overpower them, until they are able to sack the quarterback. Because of this, we define the response variable as the percentage of space to the quarterback given up by the offensive lineman on the play (which is also normally distributed through the data). We determined that the "starting" point should not be the line of scrimmage, but rather the first contact of the rusher and the tackle.
+
+For example, if the offensive tackle gives up a sack, this variable would be 1 because they gave up 100% of the distance to the quarterback. Likewise, if they held the defender to the same position for the whole play, this variable would be 0 because they gave up 0% of the distance to the quarterback. 
+
+In measuring the percent of yards given up, we include a varying intercept for each offensive tackle, and four predictors to hold constant in the variable. These predictors are end power rush percentage, end height, end weight, play length, and a binary indicator for obvious passing situations. We chose these predictors because they may affect the play beyond the skill of the offensive lineman. 
+
+### Speed Rushing Model
+
+For speed rushing, the offensive tackle must prevent the rusher from going around them, typically on the outside, by moving back quickly. This "get off time" is the key to our speed rushing model. We attempt to capture lineman performance against speed rushing by examining the amount of yards moved by the tackle in the first second of the play after the ball snap. We feel that if a tackle is able to move far enough back in the first second of the play, they set themselves up to be able to successfully defend against the speed rush. Accordingly, distance moved in the first second of the play is our response variable for speed rushing.
+
+Similarly to the power rushing model, we include a varying intercept for each offensive tackle, but only two predictors: the percentage that the defender speed rushes (as opposed to power rushing) and a binary indicator indicating an obvious pass play.
 
 # Results
 
