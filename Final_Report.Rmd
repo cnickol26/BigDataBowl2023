@@ -10,6 +10,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
 ```
 
 # Introduction
@@ -43,11 +44,29 @@ Using the expansive, eight-week NFL player tracking data, we first cleaned and f
   - Edge rushers who were also in coverage
   - Edge rushers who disengaged with the tackle (stunt block or other)
 
-Note that a chip block occurs when the running back or tight end "chips" the defender, aiding the lineman, before running their route, thereby aiding them in blocking the defender. Each of these events change the interaction between the lineman and the defender, and would skew our model if left in.
+Note that a chip block occurs when the running back or tight end "chips" the defender, aiding the lineman, before running their route, thereby aiding them in blocking the defender. Each of these events change the interaction between the lineman and the defender, and would skew our model if left in. We also flipped the position of the right tackles and left ends around the ball so all the tackle-end interactions are on a similar path and direction for modeling. 
 
-## Gaussian Mixture Model 
+## Speed vs. Power Rush Modeling
+
+Once the data was prepared, we turned to creating a model to determine whether a specific rush was a speed or power rush. Because there was no label in the data for rush type, this would require an unsupervised model. As a means of evaluating performance of the model, we randomly selected 10 plays, watched the game film, and labeled the rush type for each edge rusher (20 rushers) to create test data. We created four variables for each rush for our models to use in determining rush type:
+
+  1. Mean_tackle_end_dist: Average distance between the tackle and edge rusher on the play
+  2. Mean_tackle_end_facing: Average difference between the angle of tackle and rusher (0 is facing each other, 180 is facing in opposite directions)
+  3. End_dist_travel: Total distance traveled by the edge rusher
+  4. Mean_end_speed: Average speed of the edge rusher during the play
+
+```{r}
+table <- data.frame(Rush_Type=c("Power", "Speed"),
+                    Mean_tackle_end_dist=c(1.16615885, 1.15544887),
+                    Mean_tackle_end_facing=c(26.1976727, 61.32940427),
+                    End_dist_travel = c(7.27401843, 9.67472515),
+                    Mean_end_speed = c(2.78494659, 2.98266389))
+
+kable(table)
+```
 
 We created a k-means clustering model as well (both performed similarly on our test data but GMM gives probability of belonging in each class)
+
 
 Remove plays where the model was less than 55% confident in its prediction
 
