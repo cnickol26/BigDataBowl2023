@@ -1,16 +1,23 @@
 ---
 title: "Evaluating Offensive Linesman with Bayesian Methods"
-output: html_document
-date: "2023-01-08"
+author: 'Joshua Gen (jdg9vr@virginia.edu) and Connor Nickol (can2hr@virginia.edu)'
+date: "Big Data Bowl 2023"
+output: 
+  html_document:
+    number_sections: true
+    toc: true
+
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # Introduction
 
+# Data Preparation
 
+# Speed vs. 
 
 
 
