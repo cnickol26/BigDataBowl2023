@@ -354,7 +354,8 @@ animate_play_subset(202109190975)
 
 
 
-animate_play_subset(20211010112817)
+p <- animate_play_subset(20211010112817)
+anim_save("rush_type_ex.gif", p)
 
 
 plays %>% filter(uniqueplayId==20211010112817) %>% View()
