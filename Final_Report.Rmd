@@ -1,12 +1,11 @@
 ---
-title: "Evaluating Offensive Linesman with Bayesian Methods"
-author: 'Joshua Gen (jdg9vr@virginia.edu) and Connor Nickol (can2hr@virginia.edu)'
-date: "Big Data Bowl 2023"
+title: "Evaluating Offensive Linemen with Bayesian Methods"
+author: 'Josh Gen (jdg9vr@virginia.edu) and Connor Nickol (can2hr@virginia.edu)'
+date: "Big Data Bowl 2023: Metric Track"
 output: 
   html_document:
     number_sections: true
     toc: true
-
 ---
 
 ```{r setup, include=FALSE}
@@ -15,11 +14,24 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction
 
-# Data Preparation
+Offensive linemen provide key value in a football game, which often goes unnoticed on box scores and game logs. While there are plenty of metrics and statistics for ball-handlers and defenders, there are not many commonly used statistics to evaluate offensive linemen.
 
-# Speed vs. 
+We create a novel scoring system for offensive linemen based on the type of rush they encounter. We note the need for different models for different rush types, as they significantly affect the evaluation of the offensive lineman on that play.
+
+We identify two common rushing techniques employed by defensive ends: bull/power rush (hereby referred to as power rush) and speed rush. A speed rush, as identified in Figure 1 below, is a rush in which the defender attempts to speed around the lineman and reach the quarterback before the lineman for a sack.
+
+![**Figure 1**: Myles Garrett, circled in red, engaging in a speed rush](./Visuals/speedrush.gif)
+
+A power rush, demonstrated in Figure 2 below, occurs when the defender attempts to overpower the lineman by pushing them back, eventually reaching and sacking the quarterback.
+
+![**Figure 2**: Myles Garrett, circled in red, engaging in a power rush](./Visuals/powerrush.gif)
 
 
 
+# Methods
 
+## Speed vs. Power Rush Clustering
 
+## Bayesian Hierarchical Model
+
+# Results
