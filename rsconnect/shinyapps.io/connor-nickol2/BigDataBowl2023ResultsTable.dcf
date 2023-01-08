@@ -1,0 +1,13 @@
+name: BigDataBowl2023ResultsTable
+title: BigDataBowl2023ResultsTable
+username:
+account: connor-nickol2
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7989210
+bundleId: 6707729
+url: https://connor-nickol2.shinyapps.io/BigDataBowl2023ResultsTable/
+when: 1673105038.99978
+lastSyncTime: 1673105038.99979
+asMultiple: FALSE
+asStatic: FALSE

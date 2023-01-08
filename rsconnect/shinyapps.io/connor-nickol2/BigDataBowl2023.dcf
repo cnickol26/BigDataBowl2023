@@ -1,0 +1,14 @@
+name: BigDataBowl2023
+title: BigDataBowl2023
+username:
+account: connor-nickol2
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7982219
+bundleId: 6702250
+url: https://connor-nickol2.shinyapps.io/BigDataBowl2023/
+when: 1672963798.80462
+lastSyncTime: 1672963798.80464
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .gitattributes|.ipynb_checkpoints/Clustering-checkpoint.ipynb|.ipynb_checkpoints/DataCleaning-checkpoint.ipynb|.ipynb_checkpoints/Modeling-checkpoint.ipynb|Animate_Play.R|cluster_data.csv|clustered.csv|Clustering.ipynb|Connor_Code.ipynb|data_flipped.csv|data_not_flipped.csv|DataCleaning.ipynb|Final_Plot_Code.R|LICENSE|Modeling_Josh.ipynb|Modeling.ipynb|player_teams.csv|README.md|RushTypeModeling.ipynb|table_code.html|Text_Files/Brainstorm.txt|Text_Files/Porter_Meeting_Notes.txt|logos|nfl-big-data-bowl-2023|Visuals

@@ -1,6 +1,6 @@
 ---
-title: "BDB Plots"
-author: 'Connor Nickol, email: can2hr@virginia.edu'
+title: "Big Data Bowl 2023 Results Table"
+author: 'Connor Nickol and Josh Gen, email: can2hr@virginia.edu'
 date: "2023-01-05"
 output:
   html_document:
@@ -11,7 +11,7 @@ output:
 runtime: shiny    
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE,warning=FALSE,echo=FALSE,message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(DT)
@@ -19,8 +19,9 @@ library(shiny)
 library(shinythemes)
 ```
 
+
+```{r,include=FALSE,warning=FALSE,message=FALSE}
 ## Looking at Speed
-```{r}
 speed_coef <- read_csv('speed_coeff.csv')
 logos <- read_csv('logos.csv')
 pics <- read_csv('linemanlinks.csv')
@@ -31,8 +32,9 @@ speed_coef_filt <- speed_coef %>% left_join(logos) %>% left_join(pics, by = c('t
   rename(`Speed Score` = mean_scaled, `Speed Score SD` = sd, `Number of Speed Rushes Faced` = n, ` ` = link, Player = tackle_name, Team = team, `  ` = link_to_pic)
 
 ```
+
+```{r,include=FALSE,warning=FALSE,message=FALSE}
 ## Looking at Power
-```{r}
 power_coef <- read_csv("power_coeff.csv")
 
 power_coef$mean_scaled <- scale(power_coef$mean)[,1]
@@ -41,8 +43,9 @@ power_coef_filt <- power_coef %>% left_join(logos) %>% left_join(pics, by = c('t
 
 ```
 
+
+```{r,include=FALSE,warning=FALSE,message=FALSE}
 ## Looking at full rankings
-```{r}
 power_coef_full <- power_coef %>% select(tackle_name,team,mean_scaled,n) %>% 
   rename(power_mean_scaled = mean_scaled, num_power = n)
 
@@ -53,10 +56,10 @@ full_data <- full_join(power_coef_full, speed_coef_full, by=c("tackle_name", "te
 
 full_data2 <- full_data %>% mutate(equal_weight = round((power_mean_scaled + speed_mean_scaled)/2,3),percent_weight = round(((power_mean_scaled)*.79 + (speed_mean_scaled)*.21)/2,3)) %>% select(-c(power_mean_scaled,speed_mean_scaled))
 
-full_data3 <- full_data2 %>% mutate(equal_rank = rank(-equal_weight,ties.method = 'first'),
-                                  percent_rank = rank(-percent_weight, ties.method = 'first'),
-                                  rushes_faced = num_power+num_speed) %>% 
-  filter(rushes_faced >= 10)
+full_data3 <- full_data2 %>% mutate(rushes_faced = num_power+num_speed) %>% 
+  filter(rushes_faced >= 10) %>% mutate(equal_rank = rank(-equal_weight,ties.method = 'first'),
+                                  percent_rank = rank(-percent_weight, ties.method = 'first'))
+                                  
 
 full_data4 <- full_data3 %>% left_join(logos) %>% left_join(pics, by = c('tackle_name' = 'Player'))
 
@@ -75,7 +78,7 @@ full_data4 <- full_data4 %>% rename(Player = tackle_name, `            ` = link,
 
 ```
 
-```{r}
+```{r,include=FALSE,warning=FALSE,message=FALSE}
 starters_full_data <- full_data2 %>% mutate(rushes_faced = num_power+num_speed) %>% 
   filter(rushes_faced > 48) %>% left_join(pics, by = c('tackle_name' = 'Player')) %>% 
   mutate(equal_rank = rank(-equal_weight,ties.method = 'first'),
@@ -95,8 +98,7 @@ starters_speed_data <- speed_coef %>% left_join(logos) %>% left_join(pics, by = 
 ```
 
 
-
-```{r}
+```{r,echo=FALSE,warning=FALSE}
 ## Colour and values for table colour formatting
 breaks <- seq(-3, 2.3, by = .25)
 colors <- colorRampPalette(c("#E84B4B", "#68C949"))(length(breaks) + 1)
@@ -122,7 +124,7 @@ server = function(input, output){
                          scrollY = TRUE,
                          server = FALSE,
                          pageLength = 100,
-                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
+                         columnDefs = list(list(className = 'dt-center',width = '100px',targets = '_all'))),
           escape = FALSE,
           filter = 'top',
           rownames = FALSE) %>% 
@@ -136,7 +138,7 @@ server = function(input, output){
                          scrollY = TRUE,
                          server = FALSE,
                          pageLength = 100,
-                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
+                         columnDefs = list(list(className = 'dt-center',width = '100px',targets = '_all'))),
           escape = FALSE,
           filter = 'top',
           rownames = FALSE) %>% 
@@ -154,7 +156,7 @@ server = function(input, output){
                          scrollY = TRUE,
                          server = FALSE,
                          pageLength = 100,
-                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
+                         columnDefs = list(list(className = 'dt-center',width = '100px',targets = '_all'))),
           escape = FALSE,
           filter = 'top',
           rownames = FALSE) %>% 
@@ -170,7 +172,7 @@ server = function(input, output){
                          scrollY = TRUE,
                          server = FALSE,
                          pageLength = 100,
-                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
+                         columnDefs = list(list(className = 'dt-center',width = '100px',targets = '_all'))),
           escape = FALSE,
           filter = 'top',
           rownames = FALSE) %>% 
@@ -188,7 +190,7 @@ server = function(input, output){
                          scrollY = TRUE,
                          server = FALSE,
                          pageLength = 100,
-                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
+                         columnDefs = list(list(className = 'dt-center',width = '100px',targets = '_all'))),
           escape = FALSE,
           filter = 'top',
           rownames = FALSE) %>% 
@@ -204,7 +206,7 @@ server = function(input, output){
                          scrollY = TRUE,
                          server = FALSE,
                          pageLength = 100,
-                         columnDefs = list(list(className = 'dt-center',width = '350px',targets = '_all'))),
+                         columnDefs = list(list(className = 'dt-center',width = '100px',targets = '_all'))),
           escape = FALSE,
           filter = 'top',
           rownames = FALSE) %>% 
